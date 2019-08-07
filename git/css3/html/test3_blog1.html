@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Merry's Blog</title>
+		<style type="text/css">
+			*{
+				margin: 0px;
+				padding: 0px;
+				list-style: none;
+				box-sizing: border-box;
+			}
+			body{
+				background-color: #D6D6D6;
+			}
+			body>header{
+				background-color: #FFF;
+				max-width: 980px;
+				width: 100%;
+				height: 124px;
+				margin: 0 auto;
+				border-width: 0;
+				padding: 0 20px;
+				border-bottom: 1px solid #CCC;
+				display: flex;
+				position: relative;
+				justify-content: center;
+				align-items: center;
+			}
+			header>article:first-child{
+				width: 300px;
+				padding: 10px 0;
+			}
+			header>article:first-child>img{
+				height: 100px;
+				width: 62px;
+				display: inline-block;
+			}
+			header>article:first-child>section{
+				padding: 0 18px;
+				font-weight: 700;
+				font-size: 30px;
+				color: #3b3b3b;
+				display: inline-block;
+				vertical-align: middle;
+				margin-top: -100px;
+			}
+			header>article:first-child>section div{
+				height: 31px;;
+			}
+			header>article:nth-child(2){
+				width: 682px;
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-start;
+			}
+			header>article:nth-child(2)>nav>ul{
+				width: 402px;
+				height: 38px;
+				border-top: 1px solid #3b3b3b;
+				border-bottom: 1px solid #3b3b3b;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+			}
+			header>article:nth-child(2)>nav li{
+				display: inline-block;
+				display: flex;
+				justify-content: space-around;
+			}
+			header>article:nth-child(2)>nav li>a{
+				text-decoration: none;
+				font-size: 15px;
+				color: #666;
+			}
+			header>article:nth-child(2)>nav li:first-child>a:hover{
+				color: red;
+			}
+			
+			
+			header #searchinput{
+				height: 48px;
+				width: 184px;
+				border-width: 0;
+				/* border: 1px solid #666; */
+			}
+			header #searchinput>input:first-child{
+				display: inline-block;
+				width: 146px;
+				height: 15px;
+				border: 1px solid #666;
+				border-right-width: 0px;
+				padding: 16px 10px;
+				font-size: 13px;
+				line-height: 15px;
+				float: left;
+			}
+			header #searchinput>input:last-child{
+				display: inline-block;
+				width: 31px;
+				height: 34px;
+				border: 1px solid #000000;
+				padding: 0px;
+				background: url(../img/blog/search%20press.png) center/72px 72px no-repeat;
+				float: left;
+			}
+			
+			header #menu_header{
+				display: none;
+				background-color: #999;
+				height: 40px;
+			}
+			header #menu_header img{
+				width: 45px;
+				height: 40px;
+				border: 1px solid #000;
+				
+			}
+			header #menu_header img:hover{
+				border-width: 2px;
+			}
+			header #menu_header img:active{
+				border-width: 1px;
+				opacity: 0.4;
+			}
+			
+			main{
+				background-color: #FFF;
+				/* width: 980px; */
+				width: 100%;
+				max-width: 980px;
+				/* min-width: ; */
+				height: 2531px;
+				margin: 0 auto;
+				border-width: 0;
+				padding: 0 20px;
+				overflow: overlay;
+				white-space: nowrap; 
+				/* display: flex; */
+				/* justify-content: center; */
+			}
+			main>aside{
+				width: 25%;
+				height: 725px;
+				max-width: 205px;
+				/* min-width: 170px; */
+				padding: 20px 10px 0;
+				padding-right: 25px;
+				border-size: border-box;
+				/* display: inline-block; */
+				/* border: 1px solid #666666; */
+				float: left;
+			}
+			main>aside>nav{
+				
+			}
+			main>aside>nav>div{
+				/* width: 205px; */
+				height: 24px;
+				
+				font-size: 14px;
+				font-weight: bold;
+				color: #666;
+				padding-bottom: 4px;
+				border-bottom: 2px solid #ACC4AC;
+			}
+			main>aside>nav ul{
+				display: flex;
+				padding-left: 4px;
+				flex-direction: column;
+				justify-content: space-around;
+			}
+			
+			main>aside>nav a{
+				font-size: 14px;
+				color: #666;
+				font-weight: 400px;
+				text-decoration: none;
+				display: inline-block;
+				margin-top: 14px;
+				/* line-height: 31px; */
+				
+			}
+			main>aside>article{
+				
+			}
+			main>aside>article>figcaption{
+				margin-top: 20px;
+				padding-bottom: 5px;
+				font-size: 14px;
+				font-weight: bold;
+				color: #666;
+				border-bottom: 2px solid #ACC4AC;
+			}
+			main>aside>article>figure{
+				margin-top: 20px;
+			}
+			main>aside>article>figure>img{
+				width: 100%;
+				/* height: 248px; */
+			}
+			main>aside>article>section{
+				margin-top: 20px;
+			}
+			main>aside>article div{
+				height: 16px;
+				font-size: 12px;
+				color: #666;
+			}
+			main>aside>ul{
+				margin-top: 20px;
+			}
+			main>aside>ul>li{
+				display: inline-block;
+				height: 24px;
+				width: 24px;
+				margin-right: 4px;
+				/* border: 0.5px solid #000000; */
+				background: url(../img/blog/social_icon_24x24.png) 0px -48px/auto no-repeat;
+				/* background: url(../img/blog/social_icon_24x24.png) center/auto no-repeat; */
+			}
+			
+			main>aside>footer{
+				font-size: 12px;
+				color: #333;
+				padding: 10px 0;
+				margin-top: 20px;
+			}
+			
+			
+			
+			main>article>nav{
+				text-align: center;
+				display: none;
+			}
+			main>article>nav>header{
+				height: 66px;
+				line-height: 66px;
+				font-size: 16px;
+				color: #555;
+			}
+			main>article>nav ul{
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+			}
+			main>article>nav li>a{
+				display: inline-block;
+				text-decoration: none;
+				/* float: left; */
+				width: 120px;
+				min-width: 120px;
+				height: 45px;
+				margin: 2px;
+				border: 1px solid #e2e2e2;
+				line-height: 45px;
+				font-size: 15px;
+				color: #191919;
+			}
+			main>article>nav li>a:hover{
+				color: red;
+			}
+			main>article{
+				max-width: 700px;
+				width: 75%;
+				height: 2486px;
+				boder-size: border-box;
+				/* border: 1px solid #000000; */
+				padding: 0px 10px;
+				float: left;
+
+			}
+			main>article>section{
+				padding: 20px 0px 18px 0px;
+			}
+			main>article>section figcaption{
+				font-size: 22px;
+				font-family: "microsoft yahei";
+				color: #9EC09F;
+				clear: both;
+				margin-bottom: 22px;
+			}
+			main>article>section img{
+				width: 100%;
+				max-width: 602px;;
+			}
+			main>article>section p6{
+				font-size: 14px;
+				color: #a0a0a0;
+				line-height: 28px;
+				margin: 10px 0;
+			}
+			main>article>section div{
+				width: 100%;
+				white-space: normal;
+				font-size: 14px;
+				color: #3f3f3f;
+				line-height: 160%;
+			}
+			
+			
+			
+			
+			
+			
+			
+			@media screen and (max-width:700px) {
+				header>article:nth-child(2){
+					display: none;
+				}
+				main>aside{
+					display: none;
+				}
+				main>article{
+					width: 100%;
+				}
+				main>article>nav{
+					display: block;
+				}
+				header>#menu_header{
+					display: inline-block;
+					position: absolute;
+					/* left: 100px; */
+					top: 40px;
+					right: 54px;
+				}
+			}
+			
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<article>
+				<img src="../img/blog/aHR0cDovLzU2YjAwNTk3MGNmYzcudDczLnFpZmVpeWUuY29tL3FmeS1jb250ZW50L3VwbG9hZHMvMjAxNi8wMi8xNjlmMTcwNGViYzMxZWI0NjUzODhjZjY1MzM0Y2RkZC5wbmc_p_p100_p_3.png" >
+				<section>
+					<div>Merry's</div>
+					<div>Blog</div>
+				</section>
+			</article>
+			<article>
+				<nav>
+					<ul>
+						<li>
+							<a href="#">博客</a>
+						</li>
+						<li>
+							<a href="#">关于我</a>
+						</li>
+						<li>
+							<a href="#">和我联系</a>
+						</li>
+					</ul>
+				</nav>
+				<form id="searchinput">
+					<input type="search" formmethod="post" placeholder="请输入关键字"/>
+					<input type="image" value="" />
+				</form>
+			</article>
+			<div id="menu_header">
+				<img src="../img/blog/menu_header.PNG" />
+			</div>
+		</header>
+		
+		<main>
+			<aside>
+				<nav>
+					<div>博客分类</div>
+					<ul>
+						<li>
+							<a href="#">心情</a>
+						</li>
+						<li>
+							<a href="#">教程</a>
+						</li>
+						<li>
+							<a href="#">旅行</a>
+						</li>
+						<li>
+							<a href="#">美食</a>
+						</li>
+					</ul>
+				</nav>
+				
+				<article>
+					<figcaption>
+						关于博主
+					</figcaption>
+					<figure>
+						<img src="../img/blog/aHR0cDovLzU2YjAwNTk3MGNmYzcudDczLnFpZmVpeWUuY29tL3FmeS1jb250ZW50L3VwbG9hZHMvMjAxNy8wNi8xZGUwMGQzM2U0YjQ3YjYyMjU3ZjhiYjllODA2MTU5ZC5wbmc_p_p100_p_3.png" />
+					</figure>
+					<section>
+						<div>
+							姓名：Marry Miller 
+						</div>
+						<div>
+							出生日期：2012-08-01
+						</div>
+						<div>
+							星座：处女座
+						</div>
+						<div>
+							新居城市：沈阳
+						</div>
+						<div>
+							职业：作家
+						</div>
+						<div>
+							爱好：美食、旅行、电影
+						</div>
+						
+					</section>					
+				</article>
+				
+				<ul>
+					<li></li>	
+					<li style="background-position: -24px -48px;"></li>
+					<li style="background-position: -48px -48px;"></li>
+					<li style="background-position: -528px -48px;;"></li>
+					<li style="background-position: -480px -48px;"></li>
+				</ul>
+				
+				<footer>
+					© 2105 Marry's Blog 版权所有
+				</footer>
+				
+			</aside>
+			
+			<article>
+				
+				<nav>
+					<header>
+						博客分类
+					</header>
+					<ul>
+						<li>
+							<a href="#">心情</a>
+						</li>
+						<li>
+							<a href="#">教程</a>
+						</li>
+						<li>
+							<a href="#">美食</a>
+						</li>
+						<li>
+							<a href="#">旅行</a>
+						</li>
+					</ul>
+					
+					
+				</nav>
+				
+
+				<section>
+					<figcaption>
+						如何添加新的分类？
+					</figcaption>
+					<figure>
+						<img src="../img/blog/aHR0cDovLzU2YjAwNTk3MGNmYzcudDczLnFpZmVpeWUuY29tL3FmeS1jb250ZW50L3VwbG9hZHMvMjAxNy8wNi8zYmQ5NWExNDQ5NzA3NzczMWU0OTJlMDhhNDYzOWNjYi02MDB4MjQwLmpwZw.jpg" />
+					</figure>
+					<p6> 
+						发布日期：<time>2015-08-12</time> 分类：教程 	
+					</p6>
+					<div>
+						在添加一篇博文之前，我们需要定下来博文的分类是什么。在这个模板中，我们已经预先创建了3个分类：旅行，心情和美食。当然，100%的情况下，您是不需要这3个分类中的一个或者多个的。或许，您也想将其中的分类换成别的分类或者新增分类。那么我们首先来介绍一下如何修改、新增和删除分类。
+					</div>
+				</section>
+				<section>
+					<figcaption>
+						如何添加一篇新的博文？
+					</figcaption>
+					<figure>
+						<img src="../img/blog/aHR0cDovLzU2YjAwNTk3MGNmYzcudDczLnFpZmVpeWUuY29tL3FmeS1jb250ZW50L3VwbG9hZHMvMjAxNy8wNi8zZWI3YjcxZDVhNTYzY2RiOGE3NjE1NzdjZjcwYjlhNC02MDB4MjQwLmpwZw.jpg" />
+					</figure>
+					<p6> 
+						发布日期：<time>2015-08-12</time> 分类：教程 	
+					</p6>
+					<div>
+						我们这里就介绍一种最方便，最便捷的新增博文的方式。我们通过复制的方式来新增一片文章。首先您要随便找一篇已经存在的博文。最好不要复制教程，因为这边文章比较多，删除内容起来比较麻烦。比如我们复制《关于旅行》这篇文章。			
+					</div>
+				</section>
+				
+				<section>
+					<figcaption>
+						那些与美食有关的事儿？
+					</figcaption>
+					<figure>
+						<img src="../img/blog/aHR0cDovLzU2YjAwNTk3MGNmYzcudDczLnFpZmVpeWUuY29tL3FmeS1jb250ZW50L3VwbG9hZHMvMjAxNy8wNi8xNDk3OTQxODg4NTk0OGM3ODBiNWEwNjEyNDYtNjAweDI0MC5wbmc_p_p100.png"/>
+					</figure>
+					<p6> 
+						发布日期：<time>2015-08-12</time> 分类：教程 	
+					</p6>
+					<div>
+						我无法忘记最初做的黄闷鸡块，虽然只是件极小的事情，对我影响却不同其它。我得说那是一种开始，是它让我突然明白了饭菜并非为了裹腹那么简单，有些时候，人们对待美食的态度，其实也是对待生活的态度。
+					</div>
+				</section>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				<section>
+					<figcaption>
+						寺庙的美食
+					</figcaption>
+					<figure>
+						<img src="../img/blog/aHR0cDovLzU2YjAwNTk3MGNmYzcudDczLnFpZmVpeWUuY29tL3FmeS1jb250ZW50L3VwbG9hZHMvMjAxNy8wNi8xNDk3OTQxODg5NTk0OGM3ODE2YjMwOTU4NTEtNjAweDI0MC5wbmc_p_p100.png"/>	
+					</figure>
+					<p6> 
+						发布日期：<time>2015-08-12</time> 分类：教程 	
+					</p6>
+					<div>
+						“原来如此”。真是不敢相信，寺庙师傅的手艺如此精湛。记得多年前，我曾在栖霞寺吃过斋饭，那是一碗有香茹、豆芽、金针菜以及青菜的杂烩素面，那时就感觉别有味道。没想今天更大开眼界，品尝了寺庙特有的美食，直到回去的路上，口中依然留有余香。
+					</div>
+				</section>
+				
+			</article>
+			
+			
+			
+			
+		</main>
+	</body>
+</html>

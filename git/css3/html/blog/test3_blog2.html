@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Merry's Blog</title>
+		<style type="text/css">
+			*{
+				margin: 0px;
+				padding: 0px;
+				list-style: none;
+			}
+			body{
+				background-color: #D6D6D6;
+			}
+			body>header{
+				background-color: #FFF;
+				max-width: 980px;
+				width: 100%;
+				height: 124px;
+				margin: 0 auto;
+				border-width: 0;
+				padding: 0 20px;
+				border-bottom: 1px solid #CCC;
+				display: flex;
+				position: relative;
+				justify-content: center;
+				align-items: center;
+			}
+			header>article:first-child{
+				width: 300px;
+				padding: 10px 0;
+			}
+			header>article:first-child>img{
+				height: 100px;
+				width: 62px;
+				display: inline-block;
+			}
+			header>article:first-child>section{
+				padding: 0 18px;
+				font-weight: 700;
+				font-size: 30px;
+				color: #3b3b3b;
+				display: inline-block;
+				vertical-align: middle;
+				margin-top: -100px;
+			}
+			header>article:first-child>section div{
+				height: 31px;;
+			}
+			header>article:nth-child(2){
+				width: 682px;
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-start;
+			}
+			header>article:nth-child(2)>nav>ul{
+				width: 402px;
+				height: 38px;
+				border-top: 1px solid #3b3b3b;
+				border-bottom: 1px solid #3b3b3b;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+			}
+			header>article:nth-child(2)>nav li{
+				display: inline-block;
+				display: flex;
+				justify-content: space-around;
+			}
+			header>article:nth-child(2)>nav li>a{
+				text-decoration: none;
+				font-size: 15px;
+				color: #666;
+			}
+			header>article:nth-child(2)>nav li>a:hover{
+				color: red;
+			}
+			header>article:nth-child(2)>nav li>a:visited{
+				color: #68a069;
+			}
+			header>article:nth-child(2)>nav li:first-child>a:visited{
+				
+			}
+			
+			
+			
+			header #searchinput{
+				height: 48px;
+				width: 184px;
+				border-width: 0;
+				/* border: 1px solid #666; */
+			}
+			header #searchinput>input:first-child{
+				display: inline-block;
+				width: 146px;
+				height: 15px;
+				border: 1px solid #666;
+				border-right-width: 0px;
+				padding: 16px 10px;
+				font-size: 13px;
+				line-height: 15px;
+				float: left;
+			}
+			header #searchinput>input:last-child{
+				display: inline-block;
+				width: 31px;
+				height: 32px;
+				border: 1px solid #000000;
+				padding: 0px;
+				background: url(../../img/blog/search%20press.png) center/72px 72px no-repeat;
+				float: left;
+			}
+			
+			header #menu_header{
+				display: none;
+				background-color: #999;
+				height: 40px;
+			}
+			header #menu_header img{
+				width: 45px;
+				height: 40px;
+				border: 1px solid #000;
+				
+			}
+			header #menu_header img:hover{
+				border-width: 2px;
+			}
+			header #menu_header img:active{
+				border-width: 1px;
+				opacity: 0.4;
+			}
+			
+			main{
+				background-color: #fff;
+				height: 2531px;
+				width: 100%;
+				max-width: 980px;;
+				margin: 0 auto;
+				border-width: 0;
+				padding: 0 20px;
+				overflow: overlay;
+				white-space: nowrap;
+			}
+			#mains {
+				height: 2531px;
+				width: 100%;
+				/* max-width: 980px; */
+				margin: 0 auto;
+				border-width: 0;
+				padding: 0 20px;
+				overflow: overlay;
+				white-space: nowrap;
+				resize: auto;
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			@media screen and (max-width:700px) {
+				header>article:nth-child(2){
+					display: none;
+				}
+				header>#menu_header{
+					display: block;
+					position: absolute;
+					/* left: 100px; */
+					top: 40px;
+					right: 54px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<article>
+				<img src="../../img/blog/aHR0cDovLzU2YjAwNTk3MGNmYzcudDczLnFpZmVpeWUuY29tL3FmeS1jb250ZW50L3VwbG9hZHMvMjAxNi8wMi8xNjlmMTcwNGViYzMxZWI0NjUzODhjZjY1MzM0Y2RkZC5wbmc_p_p100_p_3.png" >
+				<section>
+					<div>Merry's</div>
+					<div>Blog</div>
+				</section>
+			</article>
+			<article>
+				<nav>
+					<ul>
+						<li>
+							<a href="blog.html" target="blog_page">博客</a>
+						</li>
+						<li>
+							<a href="about_us.html" target="blog_page">关于我</a>
+						</li>
+						<li>
+							<a href="#" target="blog_page">和我联系</a>
+						</li>
+					</ul>
+				</nav>
+				<form id="searchinput">
+					<input type="search" formmethod="post" placeholder="请输入关键字"/>
+					<input type="image" value="" />
+				</form>
+			</article>
+			<div id="menu_header">
+				<img src="../../img/blog/menu_header.PNG" />
+			</div>
+		</header>
+		<main>
+			<iframe src="blog.html" id="mains" name="blog_page" >
+			
+			</iframe>
+			
+		</main>
+		
+	</body>
+</html>

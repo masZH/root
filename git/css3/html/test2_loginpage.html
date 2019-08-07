@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			body{
+				height: 936px;
+				width: 100%;
+				background: url(../img/loginpage/bg.png) no-repeat center;
+				background-size: 100% 100%;
+				overflow: hidden;
+				/* display: flex; */
+				/* align-items: center; */
+				position: relative;
+				
+			}
+			body>article{
+				width: 400px;
+				height: 240px;
+				border: 2px solid rgba(212,212,212,0.5);
+				border-radius: 10px;
+				margin: 190px auto;
+				/* background-color: #000000; */
+			}
+			body>article>header{
+				width: 400px;
+				/* padding: 14px 28px; */
+			}
+			body>article>header>img{
+				width: 344px;
+				height: 48px;
+				margin: 14px 18px;
+			}
+			#abody{
+				height: 142px;
+				width: 304px;
+				/* border: 1px solid; */
+				margin: 0 auto;
+			}
+			
+			#abody>section{
+				font-family: "microsoft yahei";
+				font-size: 14px;
+				color: #363636;
+			}
+			#abody>section>label>input{
+				height: 26px;
+				width: 220px;
+				border: 1px solid #dcdcdc;
+				margin: 0 0 18px 28px;
+			}
+			#abody>section>input{
+				width: 302px;
+				height: 30px;
+				border-width: 0px;
+				border-radius: 8px;
+				background-color: #5AC5EC;
+				color: #E4F7FB;
+				font-size: 20px;
+				outline: medium;
+			}
+			#abody>section>input:active{
+				border-width: 1px;
+				color: #616161;
+			}
+			#abody>section:last-child{
+				display: flex;
+				justify-content: space-between;
+			}
+			#abody>section:last-child>a{
+				color: #999A9A;
+				font-size: 12px;
+				margin-top: 6px;
+			}
+			#abody>section:last-child>a:hover{
+				color: #f00;
+			}
+			body>div>img{
+				position: absolute;
+				
+			}
+			body>div>img:first-child{
+				top: 32px;
+				left: 26px;
+				animation: ball1 10s ease-in-out 0s infinite alternate; 
+			}
+			@keyframes ball1{
+				0%{top: 32px;left: 26px}
+				20%{top:150px;left: 39px;}
+				40%{top:266px;left: 58px;}
+				60%{top:150px;left: 140px;}
+				80%{top:180px;left: 225px;}
+				100%{top:260px;left: 260px;}
+				/* 100%{top: 32px;left: 26px} */
+			}
+			body>div>img:nth-child(2){
+				top:544px;
+				left: 78px;
+				animation: ball2 6s linear 0s infinite forwards; 
+			}
+			@keyframes ball2{
+				0%{}
+				20%{}
+				40%{}
+				60%{}
+				80%{}
+				100%{}
+			}
+			body>div>img:last-child{
+				top: 544px;
+				left: 1168px;
+				animation: ball3 6s linear 0s infinite forwards; 
+			}
+			@keyframes ball3{
+				0%{}
+				20%{}
+				40%{}
+				60%{}
+				80%{}
+				100%{}
+			}
+			#te{
+				width: 400px;
+				height: 240px;
+				border: 2px solid rgba(212,212,212,0.5);
+				border-radius: 10px;
+				display: inline-block;
+				/* margin: 190px auto; */
+			}
+		</style>
+	</head>
+	<body>
+		<article>
+			<header>
+				<img src="../img/loginpage/logo-login.png" >
+			</header>
+			<article id="abody">
+				<section>
+					<label>
+						<span>用户名</span>
+						<input type="text" name="username" placeholder="用户名" />
+					</label>
+					
+				</section>
+				<section>
+					<label>
+						<span>密&nbsp;&nbsp;&nbsp;&nbsp;码</span>
+						<input type="text" name="password" placeholder="密码" />
+					</label>
+					
+				</section>
+				<section>
+					<input type="button" value="登录" />
+				</section>
+				<section>
+					<a href="#">忘记密码？</a>
+					<a href="#">还没账号，先去注册？</a>
+				</section>
+			</article>
+			
+		</article>
+		<div>
+			<img src="../img/loginpage/air-balloon-1.png" />
+			<img src="../img/loginpage/air-balloon-2.png" />
+			<img src="../img/loginpage/air-balloon-2.png" />	
+		</div>
+		
+		<div id="te">
+			te1
+		</div>
+		
+		<div id="te">
+			te2
+		</div>
+		<p id="te">
+			te2
+		</p>
+	</body>
+</html>
